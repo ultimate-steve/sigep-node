@@ -6,8 +6,8 @@
 }
 
 .tag{
-    width: 100mm;
-    height: 150mm;
+    width: 150mm;
+    height: 100mm;
     /*border: 1px solid black;*/
 }
 
@@ -226,4 +226,12 @@
         margin: 0px;
         font-family: Open Sans;
     }
+
+    @page  
+    { 
+        size: auto;   /* auto is the initial value */ 
+
+        /* this affects the margin in the printer settings */ 
+        margin: 3mm;  
+    } 
 }
