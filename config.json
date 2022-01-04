@@ -1,12 +1,15 @@
 {
     "calc_url": "http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx?wsdl",
     "development": {
-        "url": "https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl"
+        "url": "https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl",
+        "reversalurl": "http://webservicescolhomologacao.correios.com.br/ScolWeb/WebServiceScol?wsdl"
     },
     "test": {
-        "url": "https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl"
+        "url": "https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl",
+        "reversalurl": "http://webservicescolhomologacao.correios.com.br/ScolWeb/WebServiceScol?wsdl"
     },
     "production": {
-        "url": "https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl"
+        "url": "https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl",
+        "reversalurl": "http://webservicescol.correios.com.br/ScolWeb/WebServiceScol?wsdl"
     }
 }
