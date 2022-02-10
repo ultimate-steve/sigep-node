@@ -16,7 +16,7 @@ module.exports = {
      */
     init: User.init,
     buscaCliente,
-    pdfPLP: (idPLP, PLP, path, filename) => {
-        return new Print(idPLP, PLP, path, filename)
+    pdfPLP: (idPLP, PLP, path, filename, urls) => {
+        return new Print(idPLP, PLP, path, filename, urls)
     }
 }

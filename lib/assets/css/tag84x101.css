@@ -19,7 +19,20 @@
 
 .codes{
     display: grid;
-    grid-template-rows: 28mm 18mm 10mm;
+    grid-template-rows: 50mm 20mm 25mm 20mm;
+}
+
+.codes .row.images{
+    display: grid;
+    grid-template-columns: 50mm 50mm 50mm;
+}
+
+.codes .code-qrcode .label{
+    text-align: center;
+}
+
+.chave-nota{
+    margin-bottom: 5mm;
 }
 
 .codes .contrato,
@@ -30,8 +43,19 @@
 
 .codes .postagem-infos{
     display: grid;
-    grid-template-columns: 25mm 30.6mm 20mm 20mm;
+    grid-template-columns: 50mm 50mm 50mm;
     padding: 1mm 3mm 1mm 3mm;
+}
+
+.codes .nf-qrcode{
+    width: 30mm;
+    height: 30mm;
+    margin: 0 auto;
+}
+
+.codes .nf-qrcode img{
+    width: 30mm;
+    height: 30mm;
 }
 
 .codes .correios-infos{
@@ -44,19 +68,25 @@
     height: 38px;
 }
 
+.hidden{
+    display: none;
+}
+
 .codes .servico-postagem,
 .codes .codigo-rastreamento{
     font-weight: bold;
+    text-align: center;
 }
 
 .codes .contrato{
     margin-top: 1mm;
+    text-align: center;
 }
 
 .codes .codigo-rastreamento{
     height: 4mm;
     line-height: 1;
-    font-size: 12px;
+    font-size: 18px;
 
 }
 
@@ -72,16 +102,25 @@
 }
 
 #enc{
-    width: auto;
+    width: 30mm;
+    margin: 0 auto;
     box-sizing: border-box;
-    height: 100%;
     float: right;
 }
 
 #logo-correios{
-    margin-top: 1mm;
+    /* margin-top: 1mm; */
+    width: 30mm;
+    margin: 0 auto;
 }
 
+.code-qrcode{
+    text-align: center;
+}
+
+#qrcode {
+    width: 30mm;
+}
 
 #datamatrix, .datamatrix{
     width: 25mm;
@@ -89,7 +128,7 @@
 }
 
 .barcode{
-    width: 80mm;
+    width: 150mm;
     height: 18mm;
     margin-left: 5mm;
     margin-right: 5mm;
@@ -203,7 +242,7 @@
 
 .barcode img{
   height: 18mm;
-  width: 80mm
+  width: 150mm
 }
 
 .barcode-cep img{
