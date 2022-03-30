@@ -12,7 +12,7 @@
     }
     
     .spacer{
-        height: 150px;
+        height: 120px;
     }
     
     .line {
@@ -178,8 +178,14 @@
     }
     
     .barcode-danfe{
-        width: auto;
+        width: 80mm;
+        height: 18mm;
         margin: 0 auto;
+    }
+
+    .barcode-danfe img{
+        height: 18mm;
+        width: 80mm
     }
     
     .row.code-barcode{
