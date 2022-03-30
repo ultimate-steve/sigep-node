@@ -1,276 +1,319 @@
- /*84,7 x 101,6 */
- *{
-    padding: 0px;
-    margin: 0px;
-    font-family: Open Sans;
-}
-
-.tag{
-    width: 150mm;
-    height: 100mm;
-    /*border: 1px solid black;*/
-}
-
-.destinatario{
-    height: 19.5mm;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-}
-
-.codes{
-    display: grid;
-    grid-template-rows: 50mm 20mm 25mm 20mm;
-}
-
-.codes .row.images{
-    display: grid;
-    grid-template-columns: 50mm 50mm 50mm;
-}
-
-.codes .code-qrcode .label{
-    text-align: center;
-}
-
-.chave-nota{
-    margin-bottom: 5mm;
-}
-
-.codes .contrato,
-.codes .servico-postagem,
-.codes .correios-encomenda{
-    font-size: 10px;
-}
-
-.codes .postagem-infos{
-    display: grid;
-    grid-template-columns: 50mm 50mm 50mm;
-    padding: 1mm 3mm 1mm 3mm;
-}
-
-.codes .nf-qrcode{
-    width: 30mm;
-    height: 30mm;
-    margin: 0 auto;
-}
-
-.codes .nf-qrcode img{
-    width: 30mm;
-    height: 30mm;
-}
-
-.codes .correios-infos{
-    padding-left: 2mm;
-    padding-top: 1mm;
-}
-.codes .servico-postagem{
-    /*! background-color: blue; */
-    /*! max-height: 30px !important; */
-    height: 38px;
-}
-
-.hidden{
-    display: none;
-}
-
-.codes .servico-postagem,
-.codes .codigo-rastreamento{
-    font-weight: bold;
-    text-align: center;
-}
-
-.codes .contrato{
-    margin-top: 1mm;
-    text-align: center;
-}
-
-.codes .codigo-rastreamento{
-    height: 4mm;
-    line-height: 1;
-    font-size: 18px;
-
-}
-
-.codes .correios-encomenda div{
-    padding-left: 2mm;
-}
-
-.correios-esb-encaminhamento .wrapper-img{
-    width: 20mm;
-    height: 15mm;
-    box-sizing: border-box;
-    padding-top: 2mm;
-}
-
-#enc{
-    width: 30mm;
-    margin: 0 auto;
-    box-sizing: border-box;
-    float: right;
-}
-
-#logo-correios{
-    /* margin-top: 1mm; */
-    width: 30mm;
-    margin: 0 auto;
-}
-
-.code-qrcode{
-    text-align: center;
-}
-
-#qrcode {
-    width: 30mm;
-}
-
-#datamatrix, .datamatrix{
-    width: 25mm;
-    height: 25mm;
-}
-
-.barcode{
-    width: 150mm;
-    height: 18mm;
-    margin-left: 5mm;
-    margin-right: 5mm;
-}
-.row.code-barcode{
-    display: flex;
-    flex-direction: row;
-}
-.extra-servico{
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    /*! justify-content: space-between; */
-}
-.extra-servico .servico-item{
-    font-weight: bold;
-    font-size: 10px;
-    line-height: 1;
-    margin-bottom: 10px;
-}
-
-.recebedor{
-    display: flex;
-    flex-direction: row;
-    padding-left: 3mm;
-    padding-right: 3mm;
-    margin-top: .8mm;
-}
-
-.ass-doc{
-    display: flex;
-    flex-direction: row;
-    padding-left: 3mm;
-    padding-right: 3mm;
-    margin-top: .8mm;
-}
-
-.label{
-    font-size: 10px;
-    padding-right: 4px;
-}
-
-.underline{
-    border-bottom: 1px solid black;
-    width: 100%;
-}
-
-.assinatura, .documento{
-    display: flex;
-    flex-direction: row;
-}
-
-.assinatura{
-    flex: 4 7;
-}
-
-.documento{
-    flex: 3 7;
-    padding-left: 5px;
-}
-
-.destinatario{
-    font-size: 9px;
-    flex: 6;
-}
-
-.destinatario .dest{
-    background: black;
-    color: white;
-    font-weight: bold;
-    width: 24mm;
-    padding-left: 3mm;
-    padding-bottom: 1px;
-}
-
-.destinatario .endereco{
-    padding-left: 3mm;
-}
-
-.destinatario .row{
-    display: grid;
-    grid-template-columns: 11fr 9fr;
-}
-
-.barcode-cep{
-    display: flex;
-    justify-content: center;
-}
-
-.cep-bar{
-    width: 40mm;
-    height: 18mm;
-    margin-top: 1mm;
-}
-
-.remetente{
-    padding-left: 3mm;
-    padding-right: 3mm;
-    font-size: 8.5px;
-    line-height: 1.2;
-}
-
-.remetente .label{
-    font-weight: bold;
-    font-size: 8.5px;
-}
-
-.remetente .row{
-    display: flex;
-}
-
-.barcode img{
-  height: 18mm;
-  width: 150mm
-}
-
-.barcode-cep img{
-  height: 18mm;
-  width: 40mm;
-}
-
-.datamatrix img{
-  width: 25mm;
-}
-
-@media print {
-    .tag{
-        /*clear: both;*/
-        page-break-after: always;
-    }
-
-    *{
+	 /*84,7 x 101,6 */
+     *{
         padding: 0px;
         margin: 0px;
         font-family: Open Sans;
     }
-
-    @page  
-    { 
-        size: auto;   /* auto is the initial value */ 
-
-        /* this affects the margin in the printer settings */ 
-        margin: 3mm;  
-    } 
-}
+    
+    .tag{
+        width: 150mm;
+        height: 100mm;
+        /*border: 1px solid black;*/
+    }
+    
+    .spacer{
+        height: 150px;
+    }
+    
+    .line {
+        margin: 5mm 0;
+        border: solid 2px;
+    }
+    
+    .ml {
+        margin-left: 5mm;
+    }
+    
+    .danfe .title {
+        font-weight: bold;
+        text-align: center;
+        font-size: 22px;
+    }
+    
+    .flex {
+        display: flex;
+    }
+    
+    .bordered {
+        border: solid;
+        padding: 2mm;
+    }
+    
+    .half {
+        width: 50%;
+    }
+    
+    .destinatario{
+        height: 19.5mm;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+    
+    .codes{
+        display: grid;
+        grid-template-rows: 50mm 20mm 25mm 20mm;
+    }
+    
+    .danfe{
+        display: grid;
+        grid-template-rows: 10mm 25mm 20mm 30mm;
+    }
+    
+    .codes .row.images{
+        display: grid;
+        grid-template-columns: 50mm 50mm 50mm;
+    }
+    
+    .codes .code-qrcode .label{
+        text-align: center;
+    }
+    
+    .chave-nota{
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 5mm;
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+    
+    .codes .contrato,
+    .codes .servico-postagem,
+    .codes .correios-encomenda{
+        font-size: 10px;
+    }
+    
+    .codes .postagem-infos{
+        display: grid;
+        grid-template-columns: 50mm 50mm 50mm;
+        padding: 1mm 3mm 1mm 3mm;
+    }
+    
+    .codes .nf-qrcode{
+        width: 30mm;
+        height: 30mm;
+        margin: 0 auto;
+    }
+    
+    .codes .nf-qrcode img{
+        width: 30mm;
+        height: 30mm;
+    }
+    
+    .codes .correios-infos{
+        padding-left: 2mm;
+        padding-top: 1mm;
+    }
+    .codes .servico-postagem{
+        /*! background-color: blue; */
+        /*! max-height: 30px !important; */
+        height: 38px;
+    }
+    
+    .hidden{
+        display: none;
+    }
+    
+    .codes .servico-postagem,
+    .codes .codigo-rastreamento{
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .codes .contrato{
+        margin-top: 1mm;
+        text-align: center;
+    }
+    
+    .codes .codigo-rastreamento{
+        height: 4mm;
+        line-height: 1;
+        font-size: 18px;
+    
+    }
+    
+    .codes .correios-encomenda div{
+        padding-left: 2mm;
+    }
+    
+    .correios-esb-encaminhamento .wrapper-img{
+        width: 20mm;
+        height: 15mm;
+        box-sizing: border-box;
+        padding-top: 2mm;
+    }
+    
+    #enc{
+        width: 30mm;
+        margin: 0 auto;
+        box-sizing: border-box;
+        float: right;
+    }
+    
+    #logo-correios{
+        /* margin-top: 1mm; */
+        width: 30mm;
+        margin: 0 auto;
+    }
+    
+    .code-qrcode{
+        text-align: center;
+    }
+    
+    #qrcode {
+        width: 30mm;
+    }
+    
+    #datamatrix, .datamatrix{
+        width: 25mm;
+        height: 25mm;
+    }
+    
+    .barcode{
+        width: 150mm;
+        height: 18mm;
+        margin-left: 5mm;
+        margin-right: 5mm;
+    }
+    .row.code-barcode{
+        display: flex;
+        flex-direction: row;
+    }
+    .extra-servico{
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        /*! justify-content: space-between; */
+    }
+    .extra-servico .servico-item{
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 1;
+        margin-bottom: 10px;
+    }
+    
+    .recebedor{
+        display: flex;
+        flex-direction: row;
+        padding-left: 3mm;
+        padding-right: 3mm;
+        margin-top: .8mm;
+    }
+    
+    .ass-doc{
+        display: flex;
+        flex-direction: row;
+        padding-left: 3mm;
+        padding-right: 3mm;
+        margin-top: .8mm;
+    }
+    
+    .label{
+        font-size: 10px;
+        padding-right: 4px;
+    }
+    
+    .underline{
+        border-bottom: 1px solid black;
+        width: 100%;
+    }
+    
+    .assinatura, .documento{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .assinatura{
+        flex: 4 7;
+    }
+    
+    .documento{
+        flex: 3 7;
+        padding-left: 5px;
+    }
+    
+    .destinatario{
+        font-size: 9px;
+        flex: 6;
+    }
+    
+    .destinatario .dest{
+        background: black;
+        color: white;
+        font-weight: bold;
+        width: 24mm;
+        padding-left: 3mm;
+        padding-bottom: 1px;
+    }
+    
+    .destinatario .endereco{
+        padding-left: 3mm;
+    }
+    
+    .destinatario .row{
+        display: grid;
+        grid-template-columns: 11fr 9fr;
+    }
+    
+    .barcode-cep{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .cep-bar{
+        width: 40mm;
+        height: 18mm;
+        margin-top: 1mm;
+    }
+    
+    .remetente{
+        padding-left: 3mm;
+        padding-right: 3mm;
+        font-size: 8.5px;
+        line-height: 1.2;
+    }
+    
+    .remetente .label{
+        font-weight: bold;
+        font-size: 8.5px;
+    }
+    
+    .remetente .row{
+        display: flex;
+    }
+    
+    .barcode img{
+      height: 18mm;
+      width: 150mm
+    }
+    
+    .barcode-cep img{
+      height: 18mm;
+      width: 40mm;
+    }
+    
+    .datamatrix img{
+      width: 25mm;
+    }
+    
+    @media print {
+        .tag{
+            /*clear: both;*/
+            page-break-after: always;
+        }
+    
+        *{
+            padding: 0px;
+            margin: 0px;
+            font-family: Open Sans;
+        }
+    
+        @page  
+        { 
+            size: auto;   /* auto is the initial value */ 
+    
+            /* this affects the margin in the printer settings */ 
+            margin: 3mm;  
+        } 
+    }
