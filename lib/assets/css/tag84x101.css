@@ -6,7 +6,7 @@
     }
     
     .tag{
-        width: 150mm;
+        width: 120mm;
         height: 100mm;
         /*border: 1px solid black;*/
     }
@@ -51,7 +51,7 @@
     
     .codes{
         display: grid;
-        grid-template-rows: 50mm 20mm 25mm 20mm;
+        grid-template-rows: 50mm 20mm 10mm 20mm;
     }
     
     .danfe{
@@ -61,7 +61,7 @@
     
     .codes .row.images{
         display: grid;
-        grid-template-columns: 50mm 50mm 50mm;
+        grid-template-columns: 40mm 40mm 40mm;
     }
     
     .codes .code-qrcode .label{
@@ -86,7 +86,7 @@
     
     .codes .postagem-infos{
         display: grid;
-        grid-template-columns: 50mm 50mm 50mm;
+        grid-template-columns: 40mm 80mm;
         padding: 1mm 3mm 1mm 3mm;
     }
     
@@ -171,11 +171,17 @@
     }
     
     .barcode{
-        width: 150mm;
+        width: 80mm;
         height: 18mm;
         margin-left: 5mm;
         margin-right: 5mm;
     }
+    
+    .barcode-danfe{
+        width: auto;
+        margin: 0 auto;
+    }
+    
     .row.code-barcode{
         display: flex;
         flex-direction: row;
@@ -253,7 +259,7 @@
     
     .destinatario .row{
         display: grid;
-        grid-template-columns: 11fr 9fr;
+        grid-template-columns: 80mm 40mm;
     }
     
     .barcode-cep{
@@ -285,7 +291,7 @@
     
     .barcode img{
       height: 18mm;
-      width: 150mm
+      width: 80mm
     }
     
     .barcode-cep img{
